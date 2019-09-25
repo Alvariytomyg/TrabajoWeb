@@ -27,6 +27,7 @@ public class Person implements Serializable{
 	public static void main(String[] args) {
 		System.out.println("Hola");
 		System.out.println("XD");
+		System.out.println("Practicando");
 
 	}
 
