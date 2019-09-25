@@ -6,11 +6,19 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 	<persistence-unit name="ArtistfyPlatform" 
 	transaction-type="JTA">
 	<jta-data-source>java:/exampleDS</jta-data-source>
-	<class>pe.edu.upc.entity.Person</class>
+	<exclude-unlisted-classes>false</exclude-unlisted-classes>
 	<properties>
-	   <property
-	   name="javax.persistence.schema-generation.database.action"
-	   value="none" />
+	      <property
+	      name="javax.persistence.schema-generation.database.action"
+	      value="drop-and-create" />
+	      
+	      <property
+	      name="javax.persistence.persistence.sql-load-script-sorce"
+	      value="META-INF/data.sql" />
+	   
+	   
+	      <property name="hibernate.show_sql" value="true"/>
+	      <property name="hibernate.format_sql" value="true"/>
 	   </properties>
 	</persistence-unit>
 </persistence>
