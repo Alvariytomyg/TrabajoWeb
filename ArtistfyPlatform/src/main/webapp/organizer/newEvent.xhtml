@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<body>
+	
+	  
+	     <p:messages autoUpdate="true" />
+	     
+	     <p:panel>
+	        <h:column>
+	         <f:facet name="header">Nuevo Evento</f:facet> 
+	         <h:panelGrid colums="3">
+	              <p:outputLabel for="txtName" value="Nombre" />
+	              <p:inputText id="txtName"
+	              value="#{eventController.event.name}" size="30"
+	              required="true"/>
+	              
+	              
+	               
+	               <p:message for="txtName" display="text"/>
+	               <p:outputLabel for="txtDescription" value="Descripción" />
+	              <p:inputText id="txtDescription"
+	              value="#{eventController.event.description}" size="30"
+	              required="true"/>
+	               <p:message for="txtDescription" display="text"/>
+	               
+	               
+	               <p:outputLabel for="txtPrice" value="Precio" />
+	              <p:inputText id="txtPrice"
+	              value="#{eventController.event.price}" size="20"
+	              required="true"/>
+	               <p:message for="txtPrice" display="text"/>
+	             
+	             </h:panelGrid>
+	             <p:commandButton value="Crear" action="#{eventController.saveEvent()}" />
+	        <p:commandButton value="Volver" action="index?faces-redirect=true"
+	        inmediate="true" />
+	         </h:column>
+	     </p:panel>
+	  
+	
+</body>
+</html>

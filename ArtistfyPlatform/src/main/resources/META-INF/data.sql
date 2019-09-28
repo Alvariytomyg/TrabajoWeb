@@ -1,5 +1,5 @@
 INSERT INTO Users(username, password, role)
-	VALUES (1,'Alvaro','123','ROLE_ORGANIZER');
+	VALUES ('Alvaro','123','ROLE_ORGANIZER');
 
 INSERT INTO Users(username, password, role)
-	VALUES (2,'Juan','123','ROLE_ARTIST');
+	VALUES ('Juan','123','ROLE_ARTIST');
