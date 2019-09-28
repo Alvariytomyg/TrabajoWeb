@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * @author Alvaro
+ * @author Kevin
  *
  */
 @Entity
