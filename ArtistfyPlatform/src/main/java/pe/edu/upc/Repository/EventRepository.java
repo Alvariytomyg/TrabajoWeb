@@ -23,7 +23,8 @@ public class EventRepository implements Serializable {
     	em.persist(e);
     }
     
-    public List<Event> findAll(){
+    @SuppressWarnings("unchecked")
+	public List<Event> findAll(){
     	List<Event> events = new ArrayList<>();
     	
     	try {
