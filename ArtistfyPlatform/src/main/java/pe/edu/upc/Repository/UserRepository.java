@@ -11,23 +11,23 @@ import javax.persistence.Query;
 import pe.edu.upc.entity.User;
 
 @Named
-public class UserRepository implements IUserRepository,Serializable {
+public class UserRepository implements IUserRepository, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@PersistenceContext(unitName = "ArtistfyPlatform")
 	private EntityManager em;
 	
-	
+	@SuppressWarnings("unchecked")
 	@Override
 	public User login(User u) throws Exception{
 		User user=null;
-		Query query = em.createQuery("FROM User u WHERE u.username = ?1 and u.password = ?2  ");
+		Query query = em.createQuery("FROM User u WHERE u.username = ?1 and u.password = ?2");
 		
 		query.setParameter(1, u.getUsername());
 		query.setParameter(2, u.getPassword());
 		
-		@SuppressWarnings("unchecked")
+		
 		List<User> users = query.getResultList();
 		if(!users.isEmpty())
 			user = users.get(0);

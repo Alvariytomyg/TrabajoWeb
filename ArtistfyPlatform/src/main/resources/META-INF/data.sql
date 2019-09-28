@@ -1,2 +1,5 @@
-INSERT INTO Users(username,password role) VALUES ('Alvaro','123','ROLE_ADMIN')
-INSERT INTO Users(username,password role) VALUES ('Juan','123','ROLE_USER')
+INSERT INTO Users(username, password, role)
+	VALUES (1,'Alvaro','123','ROLE_ORGANIZER');
+
+INSERT INTO Users(username, password, role)
+	VALUES (2,'Juan','123','ROLE_ARTIST');

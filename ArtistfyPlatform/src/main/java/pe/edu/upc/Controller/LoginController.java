@@ -36,12 +36,12 @@ public class LoginController implements Serializable {
 			User user = this.userService.login(this.user);
 			
 			if(user != null) {
-				if(user.getRole().equals(Role.ROLE_ADMIN)) {
+				if(user.getRole().equals(Role.ROLE_ORGANIZER)) {
 					FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", user); 
-					redirect = "admin/categorys?faces-redirect=true";
-				}else if(user.getRole().equals(Role.ROLE_USER)) {
+					redirect = "organizer/categorys?faces-redirect=true";
+				}else if(user.getRole().equals(Role.ROLE_ARTIST)) {
 					FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", user);
-					redirect = "user/reportProducts?faces-redirect=true";
+					redirect = "artist/reportProducts?faces-redirect=true";
 				}
 			}else {
 				FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN,

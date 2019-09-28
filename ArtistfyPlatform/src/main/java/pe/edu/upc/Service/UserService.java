@@ -9,16 +9,19 @@ import pe.edu.upc.Repository.IUserRepository;
 import pe.edu.upc.entity.User;
 
 @Named
-public class UserService implements IUserRepository, Serializable {
+public class UserService implements IUserService, Serializable {
+
 	
 	private static final long serialVersionUID = 1L;
-	
+
 	@Inject
 	private IUserRepository userRepository;
 	
 	@Override
-	 public User login(User u)throws Exception{
+	public User login(User u) throws Exception {
 		return userRepository.login(u);
 	}
+	
+	
 
 }
