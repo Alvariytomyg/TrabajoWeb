@@ -22,9 +22,12 @@ public class ArtistProfile implements Serializable{
 	private String description;
 	@Column(name="websiteUrl", nullable=false, length=35)
 	private String websiteUrl;
+	
+
 	public int getIdArtistProfile() {
 		return idArtistProfile;
 	}
+		
 	public void setIdArtistProfile(int idArtistProfile) {
 		this.idArtistProfile = idArtistProfile;
 	}
