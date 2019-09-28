@@ -28,7 +28,7 @@ public class ArtistProfileController implements Serializable {
 	public void init() {
 		this.listaArtistProfile=new ArrayList<ArtistProfile>();
 		this.artistProfile=new ArtistProfile();
-		this.listar();
+		this.listar();;
 	}
 	
 	public String nuevoArtistProfile() {
